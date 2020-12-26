@@ -1,0 +1,168 @@
+// shopping cart styles
+.shoppingCart
+    // format
+    display: flex
+    flex-direction: column
+    align-items: end
+
+    // styles
+    margin: 15px 0
+    background-color: $whiteColor
+    border: 2px solid rgba(0, 0, 0, .075)
+    overflow-x: auto
+
+    table.shoppingTable
+        width: 100%
+
+        tr.tableHeader,
+        tr.tableBottom
+            background-color: rgba(0, 0, 0, .075)
+
+            th,
+            td
+                padding: 15px 10px
+
+                &:first-child
+                    padding-left: 15px
+                    
+                &:last-child
+                    padding-right: 15px
+
+                h6
+                    font-size: 1rem
+                    color: $seconderyColor
+                    margin-bottom: 0
+                    
+                p
+                    margin: 5px 0
+                    font-size: .9rem
+                    color: $seconderyColor
+
+                .button
+                    display: block
+                    padding: 15px
+                    border-radius: 30px
+
+                    &:hover
+                        opacity: .8
+
+        tr.tableRow
+            border-bottom: 2px solid rgba(0, 0, 0, .075)
+
+            td
+                padding: 25px 10px
+
+                &:first-child
+                    padding-left: 15px
+
+                &:last-child
+                    padding-right: 15px
+
+                &.productImg
+                    img
+                        width: 100px
+                        height: auto
+                        margin-right: 15px
+                        
+                &.productText                    
+                    h5
+                        font-size: 1rem
+                        color: $primaryColor
+                        margin-bottom: 7px
+
+                    p
+                        font-size: .9rem
+                        color: $seconderyColor
+                        margin-bottom: 7px
+
+                        span
+                            font-weight: 600
+                            margin-right: 2px
+
+                &.productEdit
+                    a
+                        display: inline-block
+                        font-size: 1.35rem
+                        color: $primaryColor
+
+                        &:hover
+                            opacity: .8
+
+                            
+                &.productPrice
+                    font-size: 1rem
+                    color: $seconderyColor
+                    font-weight: 600
+
+                &.productSubTotal
+                    font-size: 1rem
+                    color: $primaryColor
+                    font-weight: 600
+
+                &.productRemove
+                    a
+                        display: inline-block
+                        height: 27px
+                        width: 27px
+                        text-align: center
+                        font-size: 1rem
+                        color: $whiteColor
+                        background-color: $seconderyColor
+                        border-radius: 50%
+
+                        i
+                            line-height: 27px
+
+                        &:hover
+                            opacity: .8
+
+        tr.subTotal
+            td
+                padding: 15px 10px
+
+                &.whiteSpace
+                    visibility: hidden
+                    
+                &.text
+                    p
+                        font-weight: 400
+                        margin-bottom: 10px
+                        font-size: .9rem
+                    
+                &.number
+                    p
+                        font-size: .9rem
+                        font-weight: 600
+                        margin-bottom: 10px
+
+        tr.grandTotal
+            td
+                padding: 15px
+                padding-left: 10px
+
+                h4
+                    font-size: 1.5rem
+                    font-family: poppins-bold
+                    color: $primaryColor
+                    margin-bottom: 10px
+
+                p
+                    font-size: .9rem
+                    color: $seconderyColor
+                    margin-bottom: 0
+
+// responsive styles
+@media only screen and (max-width: 991px)
+    .shoppingCart
+        table.shoppingTable
+            tr.tableHeader,
+            tr.tableBottom
+                th,
+                td
+                    padding: 10px!important
+
+            tr.tableRow,
+            tr.subTotal,
+            tr.grandTotal
+                padding: 10px!important
+                

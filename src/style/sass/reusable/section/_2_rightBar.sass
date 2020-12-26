@@ -1,0 +1,342 @@
+.productRightBar
+    .filterByColor
+        padding: 15px
+        background-color: rgba(0, 0, 0, .075)
+        margin-bottom: 15px
+
+        .filterHeader
+            // format
+            position: relative
+
+            // styles
+            font-size: 1rem
+            color: $seconderyColor
+            padding-right: 35px
+
+            img
+                // format
+                position: absolute
+                top: 50%
+                right: 0
+                transform: translateY(-50%)
+
+                // styles
+                width: 30px
+                height: auto
+
+        .filterBody
+            padding: 15px
+
+            h4
+                font-size: 1.15rem
+                color: $seconderyColor
+                margin-bottom: 15px
+                font-weight: 700
+
+            .colorOption
+                // format
+                display: flex
+                align-items: start
+                justify-content: start
+                flex-wrap: wrap
+
+                // styles
+                margin-bottom: 25px
+
+                a
+                    // format
+                    display: block
+
+                    // styles
+                    width: 30px
+                    height: 30px
+                    border-radius: 50%
+                    margin-right: 5px
+                    margin-bottom: 5px
+
+                    &:hover
+                        opacity: .8
+
+            .sizeOption
+                display: flex
+                align-items: start
+                justify-content: start
+
+                a
+                    display: block
+                    font-weight: 700
+                    color: $primaryColor
+                    margin-right: 10px
+                    margin-bottom: 5px
+                    font-size: .9rem
+
+                    &:hover
+                        opacity: .8
+      
+        .filterBottom
+            margin: -15px
+            margin-top: 0
+            padding: 15px
+            background-color: rgba(0, 0, 0, .075)
+            font-size: .85rem
+            line-height: 1.35
+            color: $seconderyColor
+
+            span
+                font-weight: 700
+
+    .rightCalculator
+        margin-bottom: 15px
+        padding: 15px
+        background-color: rgba(0, 0, 0, .11)
+
+        .calculatorHeader
+            // format
+            display: flex
+            align-items: start
+            justify-content: space-between
+
+            // styles
+            font-size: 1rem
+            color: $seconderyColor
+            cursor: pointer
+            margin-bottom: 0
+
+            span
+                font-size: 25px
+
+        .calculatorBody
+            max-height: 0
+            overflow: hidden
+            transition: .3s
+            
+            img
+                width: 100%
+                height: auto
+
+            form
+                margin-top: 25px
+                .customSelect
+                    width: 100%
+
+                .formInput
+                    margin-top: 10px
+
+                    input
+                        background-color: $whiteColor
+                        color: rgba(0, 0, 0, .85)
+                        padding: 10px 15px
+                        width: 100%
+                        font-size: .9rem
+                        line-height: 1.35
+                        box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, .1)
+
+                .button
+                    padding: 10px 15px
+                    margin-top: 10px
+                    border-radius: 0
+                    text-align: left
+                    width: 100%
+                    font-weight: 400
+
+                    span
+                        font-weight: 600
+
+                    &:hover
+                        opacity: .8
+
+        &.active
+            .calculatorBody
+                margin-top: 25px
+                max-height: 1024px
+
+    .rightDelivery
+        margin-bottom: 15px
+        background-color: rgba(0, 0, 0, .11)
+        
+        .deliveryHeader
+            // format
+            display: flex
+            align-items: start
+            justify-content: space-between
+
+            // styles
+            font-size: 1rem
+            color: $seconderyColor
+            padding: 15px
+            cursor: pointer
+            margin-bottom: 0
+
+            span
+                font-size: 25px
+
+                i.fa-plus
+                    display: block
+                
+                i.fa-minus
+                    display: none
+
+        .deliveryBody
+            max-height: 0
+            overflow: hidden
+            transition: .3s
+                
+            iframe
+                background-color: rgba(0, 0, 0, .1)
+                width: 100%!important
+                height: auto!important
+
+            .deliveryText
+                padding: 15px
+                padding-top: 25px
+
+                .deliveryTextItem
+                    margin-bottom: 25px
+                    
+
+                    h3
+                        font-size: 1rem
+                        color: $seconderyColor
+                        font-weight: 600
+
+                    h4
+                        font-size: 1rem
+                        color: $seconderyColor
+
+                    h5
+                        font-size: 1rem
+                        color: $primaryColor
+                        margin-bottom: 2.5px
+
+                    p
+                        font-size: .85rem
+                        color: $seconderyColor
+                        line-height: 1.35
+
+                .deliveryInfoBtn
+                    display: inline-block
+                    max-width: 100%
+                    border-radius: 30px
+                    padding: 15px 20px
+                    margin-bottom: 15px
+                    font-size: .9rem
+
+                    &:hover
+                        opacity: .8
+
+        &.active
+            .deliveryHeader
+                span
+                    i.fa-plus
+                        display: none
+
+                    i.fa-minus
+                        display: block
+
+            .deliveryBody
+                max-height: 2048px
+
+    .rightCallUs
+        padding: 25px
+        background-color: $primaryColor
+        color: $whiteColor
+
+        h4
+            font-size: 1.25rem
+            font-weight: 700
+            line-height: 1.5
+            padding-bottom: 25px
+            border-bottom: 2px solid $whiteColor
+
+            span
+                white-space: nowrap
+
+        h6
+            padding: 15px 0
+            font-size: .9rem
+            font-weight: 700
+
+        p
+            font-size: .9rem
+            line-height: 1.35
+
+            a
+                display: block
+                font-weight: 700
+                text-decoration: underline!important
+                white-space: nowrap
+                color: $whiteColor
+
+                &:hover
+                    opacity: .8
+
+// responsive styles
+@media only screen and (max-width: 991px)
+    .productRightBar
+        .filterByColor
+            padding: 10px
+            margin-bottom: 10px
+
+            .filterBody
+                padding: 5px
+
+            .filterBottom
+                padding: 10px
+                margin: -10px
+                margin-top: 0            
+
+        .rightCalculator
+            margin-bottom: 10px
+            padding: 10px
+
+        .rightDelivery
+            margin-bottom: 10px
+            .deliveryHeader
+                padding: 10px
+
+            .deliveryBody
+                .deliveryText
+                    padding: 10px
+                    padding-top: 15px
+
+                    .deliveryInfoBtn
+                        padding: 10px
+                        font-size: .85rem
+
+        .rightCallUs
+            padding: 10px
+
+            a
+                font-size: .7rem
+
+@media only screen and (max-width: 767px)
+    .productRightBar
+        .filterByColor
+            display: none
+
+        .rightCalculator
+            margin-bottom: 15px
+            padding: 15px
+
+        .rightDelivery
+            margin-bottom: 15px
+
+            .deliveryHeader
+                padding: 15px
+
+            .deliveryBody
+                iframe
+                    min-height: 250px
+
+                .deliveryText
+                    padding: 15px
+
+                    .deliveryInfoBtn
+                        padding: 15px 20px
+                        font-size: .9rem
+
+        .rightCallUs
+            padding: 15px
+
+            a
+                font-size: .9rem

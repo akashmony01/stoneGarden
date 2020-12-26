@@ -1,0 +1,189 @@
+// speciality section styles starts here
+.speciality
+    .specialityContainer
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr
+        grid-template-rows: auto auto
+        grid-gap: 10px
+
+        .specialityItem
+            padding: 25px 15px
+            text-align: center
+
+            span
+                font-size: 2.5rem
+                color: $whiteColor
+                margin-bottom: 25px
+                display: block
+
+            h6
+                font-size: 1.2rem
+                color: $whiteColor
+                margin-bottom: 15px
+
+            p
+                margin: 0
+                line-height: 1.5
+                color: $whiteColor
+                padding: 0 15px
+
+            &.priceItem
+                background-color: $highLightColor
+                grid-column: 1/2
+                grid-row: 1/2
+            
+            &.timeItem
+                background-color: $primaryColor
+                grid-column: 2/3
+                grid-row: 1/2
+            
+            &.calenderItem
+                background-color: $seconderyColor
+                grid-column: 3/4
+                grid-row: 1/2
+
+        .reviewRating
+            grid-column: 1/4
+            grid-row: 2/3
+            
+            .reviewRatingContainer
+                // format
+                display: flex
+                align-items: center
+                justify-content: space-between
+                position: relative
+
+                // styles
+                margin-top: 15px
+                padding-top: 15px
+                padding-bottom: 15px
+
+                &::before
+                    position: absolute
+                    top: 0
+                    left: 50%
+                    transform: translateX(-50%)
+                    content: ''
+
+                    // styles
+                    width: calc( 100% - 30px )
+                    height: 2px
+                    background-color: rgba(0, 0, 0, .25)
+                
+
+                .rating
+                    display: flex
+                    align-items: center
+
+                    .ratingStar
+                        padding-right: 15px
+
+                        a span
+                                color: $highLightColor
+                                font-size: 2.2rem
+
+                    .ratingText
+                        font-size: 1.15rem
+                        margin: 0
+                        font-family: poppins-bold
+                        color: $seconderyColor
+                
+                .review
+                    display: block
+
+                    img
+                        max-width: 150px
+
+            .infoAlert
+                background-color: rgba(0, 0, 0, .1)
+                
+                p
+                    padding-top: 10px
+                    padding-bottom: 10px
+                    font-size: .85rem
+                    margin-bottom: 0
+
+                    span
+                        color: $seconderyColor
+                        font-weight: 700
+
+                    a
+                        color: $seconderyColor
+                        font-weight: 700
+                        text-decoration: underline!important
+                        text-decoration-color: rgba(0, 0, 0, .25)
+
+                        &:hover
+                            opacity: .8
+
+// speciality section responsive
+@media only screen and (max-width: 767px)
+    .speciality
+        padding-bottom: 10px
+        .specialityContainer
+            grid-template-columns: 1fr 1fr
+            
+            .specialityItem
+                &.priceItem
+                    grid-column: 1/2
+                    grid-row: 1/2
+                
+                &.timeItem
+                    grid-column: 2/3
+                    grid-row: 1/2
+                
+                &.calenderItem
+                    grid-column: 1/2
+                    grid-row: 2/3
+                
+            .reviewRating
+                grid-column: 2/3
+                grid-row: 2/3
+
+                .reviewRatingContainer
+                    // format
+                    flex-direction: column-reverse
+                    justify-content: space-between
+
+                    // styles
+                    margin-top: 0
+
+                    .rating
+                        flex-direction: column
+                        margin-bottom: 25px
+
+                        .ratingText
+                            margin-top: 15px
+
+                    .review
+                        margin-bottom: 25px
+
+@media only screen and (max-width: 575px)
+    .speciality
+        .specialityContainer
+            .reviewRating                
+                .reviewRatingContainer
+                    .rating
+                        .ratingStar
+                            a
+                                span
+                                    font-size: 1.15rem
+
+@media only screen and (max-width: 480px)
+    .speciality
+        .specialityContainer
+            .specialityItem
+                padding: 10px 5px
+
+                span
+                    font-size: 1.5rem
+
+                h6
+                    1rem
+                    line-height: 1.15
+
+            .reviewRating                
+                .reviewRatingContainer
+                    .review
+                        img
+                            max-width: 90%!important

@@ -1,0 +1,782 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>Stone Calculator</title>
+
+	<!-- including vendors css -->
+	<link rel="stylesheet" href="src/style/vendor/lib/bootstrap.min.css">
+	<link rel="stylesheet" href="src/style/vendor/lib/fontawesome.min.css">
+
+	<!-- imcluding owl carousel -->
+	<link rel="stylesheet" href="src/style/vendor/plugin/owl.carousel.min.css">
+	<link rel="stylesheet" href="src/style/vendor/plugin/owl.theme.default.min.css">
+	
+	<!-- including custom css -->
+	<link rel="stylesheet" href="src/style/main.css">
+</head>
+<body>
+
+	<!-- header content -->
+	<header id="header" class="header">
+		<div class="headerUpper container">
+			<div class="headerNav">
+				<form class="headerSearch">
+					<input type="text" placeholder="Search our products...">
+					<button type="submit">
+						<i class="fas fa-search"></i>
+					</button>
+				</form>
+				<ul class="navMenu">
+					<li>
+						<a href="">
+							Home
+						</a>
+					</li>
+					<li>
+						<a href="">
+							My Account & Orders
+						</a>
+					</li>
+					<li>
+						<a href="">
+							Help & Support
+						</a>
+					</li>
+					<li>
+						<a href="">
+							Delivery
+						</a>
+					</li>
+					<li>
+						<a href="">
+							Contact
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="headerLogo">
+				<a href="" class="logo">
+					<img class="regularLogo" src="src/media/image/logo.png" alt="logo">
+					<img class="lightLogo" src="src/media/image/logoLight.png" alt="logo">
+				</a>
+				<div class="shortCutBtn">
+					<a href="" class="bgSecondery">
+						CATALOGUE
+						<span>
+							<i class="far fa-play-circle"></i>
+						</span>
+					</a>
+					<a href="" class="bgLight">
+						IDEAS & ADVICE
+						<span>
+							<i class="far fa-lightbulb"></i>
+						</span>
+					</a>
+					<a href="" class="bgDark">
+						STONE CALCULATOR
+						<span>
+							<i class="fas fa-calculator"></i>
+						</span>
+					</a>
+					<a href="" class="bgHighLight">
+						CART (0)
+						<span>
+							<i class="fas fa-shopping-cart"></i>
+						</span>
+					</a>
+				</div>
+				<div class="mobileShortCut">
+					<div class="linkIcon">
+						<a href="" class="linkIconItem phoneIcon">
+							<span>
+								<i class="fas fa-phone-alt"></i>
+							</span>
+						</a>
+						<form class="linkIconItem searchIcon">
+							<input type="text" placeholder="Search our products...">
+							<span>
+								<i class="fas fa-search"></i>
+							</span>
+						</form>
+						<a href="" class="linkIconItem cartIcon">
+							<span>
+								<i class="fas fa-shopping-cart"></i>
+							</span>
+						</a>
+					</div>
+					<a class="menuIcon">
+						<span></span>
+						<span></span>
+						<span></span>
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="headerLower">
+			<div class="headerInfo">
+				<div class="headerInfoInner container">
+					<p class="infoLeft">
+						Customer Services, 8am-6pm: <span>0300 303 3213</span>
+					</p>
+					<ul class="infoRight">
+						<li>
+							Fully price matched catalogue
+						</li>
+						<li>
+							Natonwide shipping within 48hrs
+						</li>
+						<li>
+							‘Pick a day’ delivery
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="headerCategory">
+				<ul class="categoryMenu container">
+					<li>
+						<a href="">
+							Gravel & Granites
+						</a>
+					</li>
+					<li class="dropdownParent">
+						<a>
+							Cobbles & Pebbles
+						</a>
+						<ul class="dropdown">
+							<li>
+								<a href="">
+									Plum Slate Chippings
+								</a>
+							</li>
+							<li>
+								<a href="">
+									Blue Slate Chippings
+								</a>
+							</li>
+							<li>
+								<a href="">
+									Grey Slate Chippings
+								</a>
+							</li>
+							<li>
+								<a href="">
+									Green Slate Chippings
+								</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="">
+							Slate Chippings
+						</a>
+					</li>
+					<li>
+						<a href="">
+							Garden & Landscaping
+						</a>
+					</li>
+					<li>
+						<a href="">
+							Play Areas
+						</a>
+					</li>
+					<li>
+						<a href="">
+							Equestrian
+						</a>
+					</li>
+					<li>
+						<a href="">
+							Building Materials
+						</a>
+					</li>
+					<li>
+						<a href="">
+							Winter
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="mobileMenu">
+			<ul class="container">
+				<li>
+					<a href="">
+						Gravel & Granites
+						<span>
+							<i class="fas fa-angle-right"></i>
+						</span>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						Cobbles & Pebbles
+						<span>
+							<i class="fas fa-angle-right"></i>
+						</span>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						Slate Chippings
+						<span>
+							<i class="fas fa-angle-right"></i>
+						</span>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						Garden & Landscaping
+						<span>
+							<i class="fas fa-angle-right"></i>
+						</span>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						Play Areas
+						<span>
+							<i class="fas fa-angle-right"></i>
+						</span>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						Equestrian
+						<span>
+							<i class="fas fa-angle-right"></i>
+						</span>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						Building Materials
+						<span>
+							<i class="fas fa-angle-right"></i>
+						</span>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						Winter
+						<span>
+							<i class="fas fa-angle-right"></i>
+						</span>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						Stone Calculator
+						<span>
+							<i class="fas fa-angle-right"></i>
+						</span>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						Ideas & Advice
+						<span>
+							<i class="fas fa-angle-right"></i>
+						</span>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						My Account & Orders
+						<span>
+							<i class="fas fa-angle-right"></i>
+						</span>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						Help & Support
+						<span>
+							<i class="fas fa-angle-right"></i>
+						</span>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						Delivery
+						<span>
+							<i class="fas fa-angle-right"></i>
+						</span>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						Contact
+						<span>
+							<i class="fas fa-angle-right"></i>
+						</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</header><!-- /header content -->
+	
+
+	<!-- main content start here -->
+	<main id="main" class="main">
+        <!-- product section start -->
+		<section class="product layoutA2">
+            <div class="productContainer container">
+                <div class="productArea">
+                    <div class="areaHeader">
+                        <ul class="breadCrumb">
+                            <li>
+                                <a href="index.html">
+                                    Home
+                                </a>
+                                <span>
+                                    <i class="fas fa-angle-right"></i>
+                                </span>
+                            </li>
+                            <li>
+                                <a href="">
+                                    Ideas & Advice
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="productGrid">
+                        <h3 class="productHeader">
+                            Ideas & Advice
+                        </h3>
+                        <div class="gridContainer">
+							<div class="productItem">
+                                <div class="productImg"
+                                    style="background-image: url('src/media/image/stone1.jpg');">
+                                </div>
+                                <div class="productText">
+                                    <h5>
+										Preparing for the cold season
+                                    </h5>
+                                    <p>
+                                        2-3min read
+                                    </p>
+                                </div>
+                                <a class="productBtn button" href="">
+                                    Read Article
+                                </a>
+							</div>
+							<div class="productItem">
+                                <div class="productImg"
+                                    style="background-image: url('src/media/image/stone1.jpg');">
+                                </div>
+                                <div class="productText">
+                                    <h5>
+										Preparing for the cold season
+                                    </h5>
+                                    <p>
+                                        2-3min read
+                                    </p>
+                                </div>
+                                <a class="productBtn button" href="">
+                                    Read Article
+                                </a>
+							</div>
+							<div class="productItem">
+                                <div class="productImg"
+                                    style="background-image: url('src/media/image/stone1.jpg');">
+                                </div>
+                                <div class="productText">
+                                    <h5>
+										Preparing for the cold season
+                                    </h5>
+                                    <p>
+                                        2-3min read
+                                    </p>
+                                </div>
+                                <a class="productBtn button" href="">
+                                    Read Article
+                                </a>
+							</div>
+							<div class="productItem">
+                                <div class="productImg"
+                                    style="background-image: url('src/media/image/stone1.jpg');">
+                                </div>
+                                <div class="productText">
+                                    <h5>
+										Preparing for the cold season
+                                    </h5>
+                                    <p>
+                                        2-3min read
+                                    </p>
+                                </div>
+                                <a class="productBtn button" href="">
+                                    Read Article
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+				</div>
+				<div class="productDesc">
+					<div class="callToAction">
+						<div class="callToActionItem">
+							<div class="callToActionText">
+								<h5>
+									Find more ideas and advice on our Pinterest boards.
+								</h5>
+								<p>
+									Follow our inspiration and mood boards on Pinterest.
+								</p>
+							</div>
+							<a class="callToactionBtn button" href="">
+								Go to Pinterest
+								<img src="src/media/image/pinterest.png" alt="pin">
+							</a>
+						</div>
+					</div>
+				</div>
+            </div>
+		</section>
+
+		<!-- specialities section -->
+		<section class="speciality">
+			<div class="specialityContainer">
+				<div class="specialityItem priceItem">
+					<span>
+						<i class="far fa-thumbs-up"></i>
+					</span>
+					<h6>
+						Price matched catalogue
+					</h6>
+					<p>
+						Lorem ipsum dolor sit amet, 
+						consectetuer adipiscing elit, sed diam 
+						nonummy. Lorem ipsum dolor sit.
+					</p>
+				</div>
+				<div class="specialityItem timeItem">
+					<span>
+						<i class="far fa-hourglass"></i>
+					</span>
+					<h6>
+						48hr Natonwide shipping
+					</h6>
+					<p>
+						Lorem ipsum dolor sit amet, 
+						consectetuer adipiscing elit, sed diam 
+						nonummy. Lorem ipsum dolor sit.
+					</p>
+				</div>
+				<div class="specialityItem calenderItem">
+					<span>
+						<i class="far fa-calendar-alt"></i>
+					</span>
+					<h6>
+						‘Pick a day’ delivery
+					</h6>
+					<p>
+						Lorem ipsum dolor sit amet, 
+						consectetuer adipiscing elit, sed diam 
+						nonummy. Lorem ipsum dolor sit.
+					</p>
+				</div>
+				<div class="reviewRating">
+					<div class="reviewRatingContainer container">
+						<div class="rating">
+							<div class="ratingStar">
+								<a>
+									<span>
+										<i class="fas fa-star"></i>
+									</span>
+								</a>
+								<a>
+									<span>
+										<i class="fas fa-star"></i>
+									</span>
+								</a>
+								<a>
+									<span>
+										<i class="fas fa-star"></i>
+									</span>
+								</a>
+								<a>
+									<span>
+										<i class="fas fa-star-half-alt"></i>
+									</span>
+								</a>
+								<a>
+									<span>
+										<i class="far fa-star"></i>
+									</span>
+								</a>
+							</div>
+							<h5 class="ratingText">
+								4.56 Rating | 602 Reviews
+							</h5>
+						</div>
+						<a href="" class="review">
+							<img src="src/media/image/reviews.png" alt="reviews">
+						</a>
+					</div>
+					<div class="infoAlert">
+						<p class="container">
+							<span>
+								Reviews.io:
+							</span>
+							The Stone and Garden Company is rated 4.56 based on 602 reviews.
+							<a href="">
+								Read them here..
+							</a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+	</main><!-- /main content -->
+
+	
+	<!-- footer content -->
+	<footer id="footer" class="footer">
+		<div class="footerContianer container">
+			<div class="footerItem logoItem">
+				<div class="footerContent">
+					<h6>
+						Customer Services
+					</h6>
+					<a href="">
+						0300 303 3213
+					</a>
+					<p>
+						Monday - Friday: 8:00am - 6:00pm
+					</p>
+					<p>
+						Lines are closed on Weekends and Bank Holidays. 
+						During these tmes you can email us and we will 
+						aim to reply within 48 hrs:
+						<a href="">
+							sales@stoneandgarden.co
+						</a>
+					</p>
+				</div>
+				<a class="footerLogo" href="">
+					<img src="src/media/image/logoFooter.png" alt="logo">
+				</a>
+			</div>
+			<div class="footerItem categoryItem">
+				<div class="footerContent">
+					<h6>
+						The Stone and Garden Company
+					</h6>
+					<ul>
+						<li>
+							<a href="">
+								Our Catalogue
+							</a>
+						</li>
+						<li>
+							<a href="">
+								Gravel & Granites
+							</a>
+						</li>
+						<li>
+							<a href="">
+								Cobbles & Pebbles
+							</a>
+						</li>
+						<li>
+							<a href="">
+								Slate Chippings
+							</a>
+						</li>
+						<li>
+							<a href="">
+								Bark
+							</a>
+						</li>
+						<li>
+							<a href="">
+								Sand & Soil
+							</a>
+						</li>
+						<li>
+							<a href="">
+								Sandbags
+							</a>
+						</li>
+						<li>
+							<a href="">
+								Rocksalt
+							</a>
+						</li>
+						<li>
+							<a href="">
+								Gardens & Landscaping
+							</a>
+						</li>
+						<li>
+							<a href="">
+								Play Areas
+							</a>
+						</li>
+						<li>
+							<a href="">
+								Equestrian
+							</a>
+						</li>
+						<li>
+							<a href="">
+								Building Materials
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="footerItem socialItem">
+				<div class="footerContent">
+					<h6>
+						Useful Links
+					</h6>
+					<ul>
+						<li>
+							<a href="">
+								About Us
+							</a>
+						</li>
+						<li>
+							<a href="">
+								My Account & Orders
+							</a>
+						</li>
+						<li>
+							<a href="">
+								Help & Support
+							</a>
+						</li>
+						<li>
+							<a href="">
+								Deliveries & Returns
+							</a>
+						</li>
+						<li>
+							<a href="">
+								Contact
+							</a>
+						</li>
+						<li>
+							<a href="">
+								Ideas & Advice
+							</a>
+						</li>
+						<li>
+							<a href="">
+								Reviews
+							</a>
+						</li>
+						<li>
+							<a href="">
+								Sitemap
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="socialLinks">
+					<a href="">
+						<img src="src/media/image/pinterest.png" alt="img">
+					</a>
+					<a href="">
+						<img src="src/media/image/instagram.png" alt="img">
+					</a>
+					<a href="">
+						<img src="src/media/image/linkedin.png" alt="img">
+					</a>
+					<a href="">
+						<img src="src/media/image/facebook.png" alt="img">
+					</a>
+					<a href="">
+						<img src="src/media/image/twitter.png" alt="img">
+					</a>
+					<a href="">
+						<img src="src/media/image/youtube.png" alt="img">
+					</a>
+				</div>
+			</div>
+			<div class="footerItem paymentItem">
+				<div class="footerReview">
+					<div class="reviewUpper">
+						<div class="reveiwStar">
+							<span>
+								<i class="fas fa-star"></i>
+							</span>
+							<span>
+								<i class="fas fa-star"></i>
+							</span>
+							<span>
+								<i class="fas fa-star"></i>
+							</span>
+							<span>
+								<i class="fas fa-star-half-alt"></i>
+							</span>
+							<span>
+								<i class="far fa-star"></i>
+							</span>
+						</div>
+						<div class="reviewText">
+							<h6>4.56 Avregare</h6>
+							<h6>602 Reviews</h6>
+						</div>
+					</div>
+					<div class="reviewLower">
+						<img src="src/media/image/reviews.png" alt="img">
+					</div>
+				</div>
+				<div class="footerPayment">
+					<h6>
+						Secured By
+					</h6>
+					<a href="">
+						<img src="src/media/image/master-card.png" alt="img">
+					</a>
+					<a href="">
+						<img src="src/media/image/paypal.png" alt="img">
+					</a>
+					<a href="">
+						<img src="src/media/image/visa.png" alt="img">
+					</a>
+					<a href="">
+						<img src="src/media/image/discover.png" alt="img">
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="copyRight">
+			<p class="container">
+				Copyright © Stone & Garden Company Ltd. 
+				All Rights Reserved. Customer Services, 8am-6pm:
+				<span>
+					<a class="deskOnly" href="">
+						0300 303 3213
+					</a>
+					<a href="">
+						Terms & Conditons
+					</a>
+					<a href="">
+						Privacy Policy
+					</a>
+				</span>
+			</p>
+		</div>
+	</footer><!-- /footer content -->
+
+
+
+
+	<!-- including jquery -->
+	<script src="src/script/vendor/lib/jquery.min.js"></script>
+	<script src="src/script/vendor/lib/popper.min.js"></script>
+	<script src="src/script/vendor/lib/bootstrap.min.js"></script>
+
+	<!-- owl carousel script -->
+	<script src="src/script/vendor/plugin/owl.carousel.min.js"></script>
+
+	<!-- custom js -->
+	<script src="src/script/main.js"></script>
+</body>
+</html>

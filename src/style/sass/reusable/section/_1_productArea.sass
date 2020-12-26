@@ -1,0 +1,300 @@
+.productArea
+    .areaHeader
+        // format
+        display: flex
+        align-items: center
+        justify-content: space-between
+
+        // styles
+        background-color: rgba(0, 0, 0, .075)
+        padding: 10px
+        margin-bottom: 25px
+
+        .breadCrumb
+            background-color: transparent
+            padding: 0
+            margin: 0!important
+            padding-left: 10px
+            
+            li
+                // format
+                display: flex
+                align-items: center
+
+                // styles
+                padding-right: 10px
+                a
+                    color: $blackColor
+                    font-size: .9rem
+                    line-height: 1.25
+
+                    &:hover
+                        opacity: .8
+
+                span
+                    margin-left: 5px
+
+        .sortBy
+            display: flex
+            align-items: center
+            flex-wrap: wrap
+            
+            .sortTitle
+                font-size: .9rem
+                margin-right: 10px
+
+            .customSelect
+                // styles comes from customSelect.sass on section folder
+                    
+
+    .productGrid
+        .productHeader
+            font-size: 1.5rem
+            color: $primaryColor
+            margin-bottom: 20px
+
+        .gridContainer
+            // format
+            display: grid
+            align-items: start
+            grid-template-columns: 1fr 1fr 1fr
+            grid-gap: 15px
+
+            .productItem
+                background-color: rgba(0, 0, 0, .075)
+                
+                .productImg
+                    // format
+                    position: relative
+
+                    // styles
+                    background-size: cover
+                    background-repeat: no-repeat
+                    background-position: center
+                    height: 200px
+
+                    &::before
+                        // format
+                        position: absolute
+                        top: 0
+                        left: 0
+                        bottom: 0
+                        right: 0
+                        content: ''
+
+                        // styles
+                        background-color: rgba(0, 0, 0, .35)
+                        transition: .3s
+
+                .productText
+                    padding: 15px
+
+                    h5
+                        font-size: 1.2rem
+                        color: $seconderyColor
+                        margin-bottom: 2.5px
+
+                    p
+                        font-size: .9rem
+                        color: $primaryColor
+                        margin-bottom: 15px
+                    
+                    h6
+                        margin-bottom: 5px
+                        font-size: .9rem
+                        color: $seconderyColor
+
+                        span
+                            font-size: 1.2rem
+
+                .productBtn
+                    // format
+                    display: flex
+                    justify-content: space-between
+                    flex-wrap: wrap
+
+                    // styles
+                    padding: 15px
+                    border-radius: 0
+                    text-align: left
+                    background-color: $highLightColor
+
+                    &:hover
+                        background-color: $highLightColor
+                        color: $whiteColor
+                        opacity: .8
+
+                &.outStock
+                    .productText
+                        p
+                            color: rgba(250, 0, 0, 1)
+
+                    .productBtn
+                        background-color: rgba(0, 0, 0, .5)
+
+                &:hover
+                    .productImg
+                        &::before
+                            background-color: rgba(0, 0, 0, .5)
+
+        .singleProduct
+            display: flex
+            align-items: start
+            justify-content: space-between
+
+            .productImg
+                width: calc( 50% - 15px )
+
+                .mainImg
+                    img
+                        width: 100%
+                        height: auto
+                        transition: .3s
+
+                        &.fadeOut
+                            opacity: .8
+                
+                .moreImg
+                    display: flex
+                    align-items: stretch
+                    flex-wrap: wrap
+
+                    .singleImg
+                        width: 25%
+                        height: auto
+                        cursor: pointer
+                        transition: .3s
+
+                        &.default
+                            opacity: .7
+                        
+                        &:hover
+                          opacity: .7  
+
+            .productOption
+                width: 50%
+
+                .bagSize,
+                .postCode,
+                .email
+                    margin-bottom: 15px
+
+                    h6
+                        color: $seconderyColor
+
+                    .customSelect
+                        width: 100%
+
+                        .itemList
+                            border-left: 1px solid rgba(0, 0, 0, .075)
+                            border-right: 1px solid rgba(0, 0, 0, .075)
+
+                    .emailBox
+                        input
+                            width: 100%
+                            padding: 15px
+                            border: 2px solid rgba(0, 0, 0, .075)
+                            color: $seconderyColor
+                            font-size: .9rem
+                            margin-bottom: 15px
+
+                        .button
+                            // format
+                            display: inline-block
+
+                            // styles
+                            border-radius: 30px
+                            min-width: 200px
+                            padding: 15px
+                            margin-bottom: 5px
+
+                            &:hover
+                                opacity: .8
+
+                .productPrice
+                    margin-bottom: 15px
+
+                    p
+                        font-size: .9rem
+                        color: $seconderyColor
+                        margin-bottom: 10px
+
+                        span
+                            font-size: 1.1rem
+                            font-family: poppins-medium
+
+                .addToCart
+                    // format
+                    display: flex
+                    align-items: center
+                    flex-wrap: wrap
+
+                    // styles
+                    margin-bottom: 15px
+
+                    .customIncDec
+                        // style comes from increamentDecreament.sass from section folder 
+
+                    .cartBtn
+                        padding: 15px 20px
+                        background-color: $highLightColor
+                        border-radius: 30px
+                        margin: 5px 0
+
+                        i
+                            padding-left: 25px
+
+                        &:hover
+                            opacity: .8
+                            
+                .shortDesc
+                    padding-top: 15px
+                    border-top: 2px solid rgba(0, 0, 0, .075)
+                    p
+                        font-size: .9rem
+                        color: $seconderyColor
+                        margin-bottom: 5px
+                        line-height: 1.35
+
+                        span
+                            font-family: poppins-medium
+
+// product area responsive
+@media only screen and (max-width: 991px)
+    .productArea
+        .productGrid
+            .gridContainer
+                grid-template-columns: 1fr 1fr
+                grid-gap: 10px
+
+                .productItem
+                    .productText
+                        padding: 10px
+
+                    .productBtn
+                        padding: 10px
+
+            .singleProduct
+                flex-direction: column
+
+                .productImg
+                    width: 100%
+                    margin-bottom: 25px
+
+                .productOption
+                    width: 100%
+
+@media only screen and (max-width: 767px)
+    .productArea
+        .areaHeader
+            margin-bottom: 15px
+
+@media only screen and (max-width: 480px)
+    .productArea
+        .areaHeader
+            flex-direction: column
+            align-items: center
+
+            .breadCrumb
+                padding: 0
+                margin-bottom: 10px

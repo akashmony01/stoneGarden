@@ -1,0 +1,125 @@
+.productDesc
+    .callToAction
+        .callToActionItem
+            // format
+            display: flex
+            align-items: center
+            justify-content: space-between
+
+            // styles
+            background-color: rgba(0, 0, 0, .11)
+            padding: 25px
+            margin-bottom: 25px
+
+            .callToActionText
+                width: calc( 100% - 265px )
+
+                h5
+                    font-size: 1.2rem
+                    color: $seconderyColor
+
+                p
+                    font-size: .9rem
+                    color: $seconderyColor
+                    margin-bottom: 0
+                    line-height: 1.35
+            
+            .callToactionBtn
+                // format
+                display: inline-block
+
+                // styles
+                padding: 15px
+                border-radius: 30px
+                min-width: 250px
+
+                &:hover
+                    opacity: .8
+
+            &.darkAction
+                background-color: $seconderyColor
+
+                .callToActionText
+                    h5,
+                    p
+                        color: $whiteColor
+
+                .callToactionBtn
+                    // format
+                    display: flex
+                    flex-wrap: wrap
+                    justify-content: space-around
+                    align-items: center
+
+                    // styles
+                    background-color: $highLightColor
+
+    .descText
+        .descTextItem
+            margin-bottom: 25px
+
+            h4
+                color: $primaryColor
+                font-size: 1.35rem
+                margin-bottom: 10px
+
+            p
+                color: $seconderyColor
+                font-size: .9rem
+                margin-bottom: 0
+                line-height: 1.35
+
+    .productTable
+        width: 100%
+        border: 2px solid rgba(0, 0, 0, .075)
+        
+        tr
+            th
+                padding: 15px
+                background-color: rgba(0, 0, 0, .11)
+                font-weight: 700
+                color: $seconderyColor
+
+            td
+                padding: 15px
+                font-size: .9rem
+                color: $seconderyColor
+                border: 2px solid rgba(0, 0, 0, .075)
+
+                &.titleText
+                    font-weight: 700
+
+// product desc responsive
+@media only screen and (max-width: 991px)
+    .productDesc
+        .callToAction
+            .callToActionItem
+                flex-direction: column
+                justify-content: center
+                text-align: center
+                padding: 20px 15px
+                margin-bottom: 15px
+
+                .callToActionText
+                    width: 100%
+
+                .callToactionBtn
+                    padding: 10px
+                    margin-top: 15px
+
+        .descText
+            .descTextItem
+                margin-bottom: 15px
+
+                h4
+                    margin-bottom: 5px
+              
+@media only screen and (max-width: 767px)
+    .productDesc
+        .descText
+            margin: 15px 0
+            
+            .descTextItem
+                text-align: center
+
+

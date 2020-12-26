@@ -1,0 +1,78 @@
+.customSelect
+    // format
+    position: relative
+
+    // styles
+    padding-right: 30px
+    background-color: rgba(0, 0, 0, .1)
+    width: 180px
+
+    .indicatorArrow
+        display: block
+        position: absolute
+        top: 50%
+        right: 10px
+        transform: translateY(-65%)
+
+        i
+            transition: .3s
+
+
+    .choosenItem
+        // format
+        display: block
+
+        // styles
+        padding: 10px 15px
+        font-size: .9rem
+        color: $blackColor
+        transition: .3s
+        cursor: pointer
+        white-space: nowrap
+        overflow: hidden
+
+        &:hover
+            opacity: .8
+            
+
+    .itemList
+        // format
+        position: absolute
+        top: 100%
+        right: 0
+        z-index: 990
+        
+        // styles
+        background-color: $whiteColor
+        min-width: 100%
+        max-height: 0
+        overflow: hidden
+        transition: .3s
+
+    .selectItem
+        // format
+        display: block
+
+        // styles
+        border-bottom: 1px solid rgba(0, 0, 0, .05)
+        transition: .3s
+
+        &.selected
+            background-color: rgba(0, 0, 0, .065)
+
+        &:hover
+            background-color: rgba(0, 0, 0, .075)
+
+        a
+            display: block
+            padding: 15px
+            font-size: .9rem
+            color: $blackColor
+            white-space: nowrap
+
+    &.active
+        .indicatorArrow i
+            transform: rotate(180deg)
+
+        .itemList
+            max-height: 1024px

@@ -1,0 +1,60 @@
+// ===================================
+// this layout styles apply on
+
+// -----------------------------------
+// 1. Stone Calculator Page
+
+
+// Layout A1 styles start   
+.product.layoutA1
+    .productContainer
+        grid-row-gap: 15px
+
+        .productArea
+            .areaHeader
+                .breadCrumb
+                    padding: 10px 15px
+
+            .productGrid
+                .productHeader
+                    font-size: 1.75rem
+                    margin-bottom: 0
+
+        .productDesc
+                .descText
+                    .descTextItem
+                        p
+                            margin-bottom: 10px
+
+                            &:last-child
+                                margin-bottom: 0
+
+// layout A1 responsive
+@media only screen and (max-width: 767px)
+    .product.layoutA1
+        padding-bottom: 15px
+        .productContainer
+            grid-row-gap: 0
+            .productArea
+                grid-column-start: 1
+                grid-column-end: 2
+                grid-row-start: 1
+                grid-row-end: 2
+
+            .productDesc
+                grid-column-start: 1
+                grid-column-end: 2
+                grid-row-start: 2
+                grid-row-end: 3
+
+                .descText
+                    padding-top: 0
+
+                    .descTextItem
+                        text-align: left
+
+            .productRightBar
+                grid-column-start: 1
+                grid-column-end: 2
+                grid-row-start: 3
+                grid-row-end: 4

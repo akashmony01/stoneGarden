@@ -1,0 +1,393 @@
+// checkout details styles starts
+.checkoutDetails
+    .checkoutItem
+        background-color: rgba(0, 0, 0, .05)
+        border: 2px solid rgba(0, 0, 0, .075)
+        margin-bottom: 15px
+
+        .checkoutHeader
+            padding: 15px 20px
+            font-size: 1rem
+            color: $seconderyColor
+            background-color: rgba(0, 0, 0, .05)
+            margin-bottom: 0
+        
+        .checkoutBody
+            // format
+            display: flex
+            align-items: start
+            justify-content: space-between
+            
+            // styles
+            padding: 25px 20px
+
+            .checkoutLeft,
+            .checkoutRight
+                width: 100%
+                padding-left: 20px
+
+                &.checkoutLeft
+                    padding-left: 0
+                    padding-right: 20px
+                    border-right: 2px solid rgba(0, 0, 0, .05)
+
+
+            // independent items styles
+            .checkoutHeading
+                font-size: 1rem
+                color: $seconderyColor
+                margin-bottom: 20px
+        
+            .radioBox
+                // format
+                display: flex
+                align-items: start
+                justify-content: space-between
+
+                // styles
+                margin: 5px
+
+                input
+                    display: block
+                    height: 20px
+                    width: 20px
+                    color: $seconderyColor
+
+                label
+                    margin-top: 1.5px
+                    width: calc( 100% - 30px )
+                    cursor: pointer
+                    font-size: .9rem
+                    color: $seconderyColor
+
+            .checkoutText
+                font-size: .9rem
+                color: $seconderyColor
+                margin-bottom: 15px
+
+            .checkoutList
+                li
+                    // format
+                    position: relative
+
+                    // styles
+                    padding: 5px 10px
+                    padding-inline-start: 20px
+                    font-size: .9rem
+                    color: $seconderyColor
+
+                    &::after
+                        position: absolute
+                        top: 50%
+                        top: 11px
+                        left: 0
+                        height: 7px
+                        width: 7px
+                        border-radius: 50%
+                        content: ''
+                        background-color: $seconderyColor
+            
+            .inputBox
+                margin-bottom: 10px
+
+                input
+                    width: 100%
+                    padding: 10px 15px
+                    background-color: $whiteColor
+                    color: $seconderyColor
+                    font-size: .9rem
+                    line-height: 2
+                    border: 2px solid rgba(0, 0, 0, .1)
+
+            .button
+                padding: 15px
+                min-width: 150px
+                border-radius: 0px
+                font-size: .9rem
+
+                &:hover
+                    opacity: .8
+
+            .spiltDiv
+                display: flex
+                align-items: center
+                justify-content: space-between
+                flex-wrap: wrap
+
+                div
+                    min-width: 60%
+
+                span
+                    font-size: .9rem
+                    margin: 5px 0px
+                    color: $seconderyColor
+
+            .textArea
+                background-color: $whiteColor
+                max-height: 155px
+                overflow-y: scroll
+                padding: 15px
+                border: 2px solid rgba(0, 0, 0, .075)
+                margin-bottom: 25px
+
+                h6
+                    font-size: 1rem
+                    color: $seconderyColor
+
+                p
+                    font-size: .9rem
+                    color: $seconderyColor
+                    line-height: 1.45
+
+            &.shippingMethod
+                display: block
+
+                .checkoutBodyInner
+                    width: 80%
+
+                    .innerItem
+                        margin-bottom: 25px
+
+                        .innerHeading
+                            font-size: 1rem
+                            color: rgba(0, 0, 0, .5)
+                            margin-bottom: 20px
+
+                            &.delDateHeading
+                                margin-bottom: 10px
+
+                        .deliveryType,
+                        .deliveryDate,
+                        .deliveryTime
+                            display: flex
+                            align-items: stretch
+                            justify-content: space-between
+
+                            .delTypeItem,
+                            .delDateItem,
+                            .delTimeItem
+                                // format
+                                display: flex
+                                align-items: center
+                                justify-content: center
+                                flex-direction: column
+
+                                // styles
+                                width: calc( 50% - 7.5px )
+                                border: 2px solid rgba(0, 0, 0, .1)
+                                background-color: $whiteColor
+                                padding: 20px 15px
+                                border-radius: 2px
+                                text-align: center
+                                transition: .3s
+                                cursor: pointer
+
+                                .activeIndicator
+                                    position: absolute
+                                    top: 0
+                                    left: 50%
+                                    transform: translate(-50%, -50%)
+                                    background-color: $primaryColor
+                                    width: 20px
+                                    height: 20px
+                                    border-radius: 50%
+                                    color: $whiteColor
+                                    font-size: 11px
+                                    display: none
+
+                                    i
+                                        line-height: 20.5px
+
+                                h5
+                                    font-size: 1rem
+                                    color: $blackColor
+                                    margin-bottom: 5px
+                                    font-weight: 600
+
+                                p
+                                    font-size: .85rem
+                                    color: rgba(0, 0, 0, .5)
+                                    margin-bottom: 0
+
+                                    span
+                                        margin: 5px 0
+                                        display: block
+                                        font-size: 1rem
+                                        color: $blackColor
+                                        font-family: poppins-medium
+
+                                &.active
+                                    // format
+                                    position: relative
+
+                                    // styles
+                                    border-color: $primaryColor
+                                    background-color: transparent
+
+                                    .activeIndicator
+                                        display: block
+
+
+                            &.deliveryDate
+                                justify-content: start
+
+                                @include customOwlStyle
+                                padding: 0 40px
+
+                                
+                                .owl-nav
+                                    .owl-prev,
+                                    .owl-next
+                                        bottom: calc( 50% - 5px )!important
+                                        padding: 0px!important
+                                        margin: 0px!important
+
+                                        &.owl-prev
+                                            left: 0!important
+
+                                        &.owl-next
+                                            right: 0!important
+                                        
+                                        i
+                                            background-color: $blackColor
+                                            padding: 7px 12px
+                                            font-size: 22px
+                                            border-radius: 10px
+                                            color: $whiteColor
+
+                                .delDateItem
+                                    padding: 20px 10px
+                                    width: 80px
+                                    margin-right: 15px
+                                    margin-top: 10px
+
+                                    h5
+                                        font-size: .9rem
+                                        font-family: poppins-light
+
+                                    h6
+                                        font-size: .9rem
+                                        font-family: poppins-bold
+                                        color: $primaryColor
+                                        margin-bottom: 5px
+
+                                    &:last-child
+                                        margin-right: 0
+
+                                    &.disabled
+                                        h6
+                                            color: $blackColor
+
+                        .innerDesc
+                            padding: 15px
+                            border-radius: 2px
+                            border: 2px solid $primaryColor
+                            background-color: rgba(0, 255, 0, .1)
+
+                            p
+                                margin-bottom: 3px
+                                font-size: .85rem
+
+                                span
+                                    font-family: poppins-bold
+
+                .checkoutBottom
+                    display: flex
+                    align-items: center
+                    justify-content: space-between
+
+                    .inputBox
+                        min-width: 50%
+
+                        input
+                            width: 100%
+                            background-color: $whiteColor
+                            padding: 10px 15px
+                            font-size: .9rem
+                            line-height: 2
+                            color: $seconderyColor
+                            border: 2px solid rgba(0, 0, 0, .1)
+
+                    .button
+                        padding: 15px
+                        min-width: 150px
+                        border-radius: 0px
+                        font-size: .9rem
+
+                        &:hover
+                            opacity: .8
+
+            &.paymentInformation
+                .paymentLeft
+                    padding-right: 15px
+                    
+                    .paymentOption
+                        // format
+                        display: flex
+                        align-items: start
+                        flex-wrap: wrap
+
+                        // styles
+                        margin-bottom: 15px
+
+                        a
+                            display: inline-block
+                            margin: 5px
+                            margin-left: 0
+
+                            img
+                                width: 40px
+                                height: auto
+
+                    p
+                        font-size: .9rem
+                        color: $seconderyColor
+
+                .button
+                    min-width: 150px
+                    padding: 15px
+                    border-radius: 0px
+                    font-size: .9rem
+
+                    &:hover
+                        opacity: .8
+
+            &.reviewOrder
+                display: block
+
+// checkout styles responsive
+@media only screen and (max-width: 991px)
+    .checkoutDetails
+        .checkoutItem
+            
+            .checkoutBody
+                flex-direction: column
+
+                .checkoutLeft,
+                .checkoutRight
+                    padding: 0!important
+                    border: none!important
+
+                    &.checkoutLeft
+                        margin-bottom: 25px
+
+                &.shippingMethod
+                    .checkoutBodyInner
+                        width: 100%
+
+                    .checkoutBottom
+                        flex-direction: column
+                        align-items: start
+
+                        .inputBox
+                            margin-bottom: 15px
+                            width: 100%
+
+@media only screen and (max-width: 480px)
+    .checkoutDetails
+        .checkoutItem
+            .checkoutHeader
+                padding: 15px
+            
+            .checkoutBody
+                padding: 15px

@@ -1,0 +1,63 @@
+// ===================================
+// this layout styles apply on
+
+// -----------------------------------
+// 1. Shopping Cart Page
+
+
+// layout A2 styles starts
+.product.layoutA5
+    .productContainer
+        display: block
+
+        .productArea            
+            .areaHeader
+                .breadCrumb
+                    padding: 10px 15px
+
+            .productGrid
+                .productHeader
+                    display: flex
+                    align-items: center
+                    justify-content: space-between
+                    flex-wrap: wrap
+
+                    span
+                        margin: 5px 0
+
+                    a
+                        // format
+                        display: flex
+                        align-items: center
+                        justify-content: space-around
+                        flex-wrap: wrap
+
+                        // styles
+                        font-size: .9rem
+                        padding: 13px 15px
+                        min-width: 200px
+                        border-radius: 30px
+                        background-color: $highLightColor
+
+                        &:hover
+                            opacity: .8
+
+
+        .checkoutDetails
+            .paymentOption
+                display: flex
+                align-items: center
+                justify-content: flex-end
+                flex-wrap: wrap
+
+                a
+                    display: inline-block
+                    margin-top: 10px
+                    margin-right: 10px
+
+                    img
+                        width: 40px
+                        height: auto
+
+                    &:hover
+                        opacity: .8

@@ -1,0 +1,89 @@
+// ===================================
+// this layout styles apply on
+
+// -----------------------------------
+// 1. Checkout Page
+// 2. Shopping Cart Page
+
+// product section starts here
+.product.layoutA4
+    .productContainer
+        grid-row-gap: 15px
+        
+        .productArea
+            .areaHeader
+                .breadCrumb
+                    padding: 10px
+
+            .productGrid
+                .productHeader
+                    // format
+                    display: flex
+                    align-items: start
+                    justify-content: space-between
+                    flex-wrap: wrap
+
+                    // styles
+                    margin-bottom: 10px
+
+                    span
+                        padding-right: 15px
+
+                    .paymentOption
+                        display: flex
+                        align-items: center
+                        flex-wrap: wrap
+
+                        a
+                            // format
+                            display: inline-block
+
+                            // styles
+                            margin: 3px 5px
+                            margin-left: 0
+
+                            &:hover
+                                opacity: .8
+
+                            img
+                                width: 40px
+                                height: auto
+
+        .checkoutDetails
+            // styles comes from checkoutDetails.sass
+            // from section folder
+
+@media only screen and (max-width: 767px)
+    .product.layoutA4
+        padding-bottom: 15px
+        .productContainer
+            grid-row-gap: 0
+            .productArea
+                grid-column-start: 1
+                grid-column-end: 2
+                grid-row-start: 1
+                grid-row-end: 2
+
+            .checkoutDetails
+                grid-column-start: 1
+                grid-column-end: 2
+                grid-row-start: 2
+                grid-row-end: 3
+
+            .productRightBar
+                grid-column-start: 1
+                grid-column-end: 2
+                grid-row-start: 3
+                grid-row-end: 4
+
+// setting specialities section for responsive
+@media only screen and (max-width: 767px)
+    .speciality.layoutA4
+        padding-bottom: 0
+        .specialityContainer
+            display: block
+            
+            .reviewRating
+                .reviewRatingContainer
+                    &::before
+                        display: none

@@ -1,0 +1,84 @@
+// ===================================
+// this layout styles apply on
+
+// -----------------------------------
+// 1. Category One Page
+// 2. Category Two Page
+// 3. Stone Calculator Page
+// 4. Ideas & Advice Page
+// 5. Single Product available Page
+// 6. Single Product Out of stock Page
+// 7. Checkout Page
+// 8. shopping Cart Page
+
+// Layout A styles start
+.product
+    margin-top: 15px
+    .productContainer
+        display: grid
+        grid-auto-rows: auto 1fr
+        grid-auto-columns: 75% 25%
+        grid-column-gap: 15px
+        grid-row-gap: 25px
+
+        .productArea
+            grid-column-start: 1
+            grid-column-end: 2
+            grid-row-start: 1
+            grid-row-end: 2
+            // product area styles
+            // comes from the productArea.sass on section folder
+
+        .productDesc
+            grid-column-start: 1
+            grid-column-end: 2
+            grid-row-start: 2
+            grid-row-end: 3
+            // product desc styles
+            // comes from the producDesc.sass on section folder
+
+        .productRightBar
+            grid-column-start: 2
+            grid-column-end: 3
+            grid-row-start: 1
+            grid-row-end: 4
+            // product righ bar styles
+            // comes from the productRightBar.sass on section folder
+    
+// speciality section styles
+// comes from the specialitySection.sass on section folder
+
+// layout 2 pages responsive
+@media only screen and (max-width: 991px)
+    .product
+        .productContainer
+            grid-auto-columns: 70% 30%
+            grid-column-gap: 10px
+            grid-row-gap: 15px
+
+@media only screen and (max-width: 767px)
+    .product
+        padding-bottom: 25px
+        .productContainer
+            display: grid
+            grid-auto-rows: auto auto auo
+            grid-auto-columns: 100%
+            grid-row-gap: 15px
+
+            .productArea
+                grid-column-start: 1
+                grid-column-end: 2
+                grid-row-start: 1
+                grid-row-end: 2
+
+            .productRightBar
+                grid-column-start: 1
+                grid-column-end: 2
+                grid-row-start: 2
+                grid-row-end: 3
+
+            .productDesc
+                grid-column-start: 1
+                grid-column-end: 2
+                grid-row-start: 3
+                grid-row-end: 4

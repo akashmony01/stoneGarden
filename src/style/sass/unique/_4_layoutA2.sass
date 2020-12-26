@@ -1,0 +1,64 @@
+// ===================================
+// this layout styles apply on
+
+// -----------------------------------
+// 1. Ideas Advice Page
+
+// layout A2 styles starts
+.product.layoutA2
+    .productContainer
+        display: block
+
+        .productArea
+            padding-bottom: 15px
+            
+            .areaHeader
+                .breadCrumb
+                    padding: 10px 15px
+
+            .productGrid
+                .productHeader
+                    font-weight: 600
+                
+                .gridContainer
+                    display: grid
+                    grid-template-columns: 1fr 1fr 1fr 1fr
+
+                    .productItem
+                        .productBtn
+                            background-color: $primaryColor
+
+
+        .productDesc
+            .callToAction
+                .callToActionItem
+                    .callToactionBtn
+                        // format
+                        display: flex
+                        align-items: center
+                        justify-content: space-between
+
+                        // styles
+                        padding: 10px 25px
+
+                        img
+                            width: 25px
+                            height: auto
+                            border-radius: 3px
+
+// layout A2 responsive
+@media only screen and (max-width: 991px)
+    .product.layoutA2
+        .productContainer
+            .productArea
+                .productGrid                    
+                    .gridContainer
+                        grid-template-columns: 1fr 1fr 1fr
+
+@media only screen and (max-width: 767px)
+    .product.layoutA2
+        .productContainer
+            .productArea
+                .productGrid                    
+                    .gridContainer
+                        grid-template-columns: 1fr 1fr

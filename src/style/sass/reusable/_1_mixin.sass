@@ -1,0 +1,110 @@
+// image overlay styles
+@mixin overlayStyle    
+    &::after
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        content: ''
+        background-color: rgba(0, 0, 0, .5)
+        z-index: 0
+        transition: .3s
+
+    *
+        position: sticky
+        z-index: 1
+
+// dropdown indicator style
+@mixin indicatorStyle
+    &::before
+        position: absolute
+        bottom: 100%
+        left: 50%
+        transform: translateX(-50%)
+        
+        // styles
+        content: ''
+        border-bottom: 8px solid rgba(0, 0, 0, .25)
+        border-right: 8px solid transparent
+        border-left: 8px solid transparent
+
+    &::after
+        position: absolute
+        bottom: calc( 100% - 1px )
+        left: 50%
+        transform: translateX(-50%)
+        
+        // styles
+        content: ''
+        border-bottom: 8px solid $whiteColor
+        border-right: 8px solid transparent
+        border-left: 8px solid transparent
+
+// owl carousel customizing styles
+@mixin customOwlStyle
+    &.owl-theme
+        .owl-dots
+            position: absolute
+            bottom: 25px
+            left: 50%
+            transform: translateX(-50%)
+
+            button
+                span
+                    height: 15px!important
+                    width: 15px!important
+                    background-color: transparent!important
+                    border: 2px solid $whiteColor!important
+
+                &.active
+                    span
+                        background-color: $whiteColor!important
+            
+
+        .owl-nav
+            .owl-prev,
+            .owl-next
+                position: absolute
+                bottom: 50%
+                transform: translateY(50%)
+                background-color: transparent!important
+                
+                img
+                    width: 25px
+                    height: auto
+                    transition: .3s
+
+                &:hover
+                    img
+                        transform: scale(1.15)
+
+                &.owl-prev
+                    left: 5%
+
+                &.owl-next
+                    right: 5%
+
+// fade in mixin
+@mixin fadeInStyle
+    animation-name: fadeIn
+    animation-duration: .5s
+    animation-iteration-count: 1
+
+    @keyframes fadeIn
+        0%
+            opacity: 0
+        100%
+            opacity: 1
+
+// slide in styles mixin
+@mixin slideInStyle
+    animation-name: slideIn
+    animation-duration: .5s
+    animation-iteration-count: 1
+
+    @keyframes slideIn
+        0%
+            transform: translateY(-100%)
+        100%
+            transform: translateY(0%)

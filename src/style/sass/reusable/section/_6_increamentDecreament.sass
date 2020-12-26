@@ -1,0 +1,37 @@
+.customIncDec
+    // format
+    position: relative
+
+    // styles
+    width: 120px
+    margin: 5px 0
+    margin-right: 15px
+
+    input
+        width: 100%
+        padding: 12.5px 30px
+        border: 2px solid rgba(0, 0, 0, .1)
+        text-align: center
+        font-size: .9rem
+
+    button
+        // format
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+
+        // styles
+        color: $seconderyColor
+        border-radius: 0
+        padding: 10px 15px
+        background-color: transparent
+        font-size: .85rem
+
+        &.increase
+            right: 0
+
+        &.decrease
+            left: 0
+
+        &:hover
+            opacity: .8

@@ -1,0 +1,530 @@
+// header styles start here
+.header
+    background-color: $primaryColor
+
+    .headerUpper
+        .headerNav
+            // format
+            display: flex
+            align-items: center
+            justify-content: space-between
+
+            // style
+            padding: 10px 0
+            border-bottom: 2px solid rgba(0, 0, 0, .25)
+
+            .headerSearch
+                width: 30%
+                input
+                    color: rgba(0, 0, 0, .35)
+                    max-width: 80%
+
+                    &::placeholder
+                        color: $whiteColor
+
+                button
+                    padding: 5px
+                    border-radius: 0
+                    background-color: transparent
+                    font-size: 1.1rem
+                    color: rgba(0, 0, 0, .25)
+
+                    &:hover
+                        color: rgba(0, 0, 0, .5)
+
+            .navMenu
+                margin: 0
+                width: 70%
+                text-align: right
+
+                li
+                    display: inline
+                    border-right: 1px solid $whiteColor
+
+                    &:last-child
+                        border: none
+
+                        a
+                            padding-right: 0
+
+                    a
+                        color: $whiteColor
+                        padding: 10px 15px
+                        font-family: poppins-medium
+                        font-size: .85rem
+
+                        &:hover
+                            color: $seconderyColor
+                            text-decoration: underline!important
+
+        .headerLogo
+            // format
+            display: flex
+            align-items: start
+            justify-content: space-between
+
+            // styles
+            padding: 20px 0
+
+            .logo
+                display: block
+
+                img
+                    max-width: 150px
+                    height: auto
+
+                    &.regularLogo
+                            display: block
+                            @include fadeInStyle
+                    
+                    &.lightLogo
+                        display: none
+                        @include fadeInStyle
+
+            .shortCutBtn
+                display: flex
+                align-items: center
+                flex-wrap: wrap
+
+                a
+                    // format
+                    display: flex
+                    align-items: center
+                    justify-content: space-between
+
+                    // styles
+                    padding: 10px 15px
+                    border-radius: 20px
+                    margin: 5px 0
+                    margin-left: 10px
+                    color: $whiteColor
+                    min-width: 140px
+                    font-size: .9rem
+                    text-transform: uppercase
+
+                    span
+                        margin-left: 15px
+                        font-size: 1.1rem
+
+                    &:hover
+                        opacity: .8
+
+                    &.bgSecondery
+                        background-color: $seconderyColor
+
+                    &.bgLight
+                        background-color: rgba(0, 0, 0, .25)
+
+                    &.bgDark
+                        background-color: rgba(0, 0, 0, .5)
+
+                    &.bgHighLight
+                        background-color: $highLightColor
+
+            .mobileShortCut
+                display: none
+    
+    .headerLower
+        .headerInfo
+            padding: 10px 0
+            background-color: rgba(0, 0, 0, .25)
+
+            .headerInfoInner
+                display: flex
+                justify-content: space-between
+                align-items: center
+
+                .infoLeft
+                    margin-bottom: 0
+                    color: $whiteColor
+                    font-size: .9rem
+                    line-height: 1.35
+                    padding-right: 15px
+
+                    span
+                        font-weight: 700
+                        display: inline-block
+
+                .infoRight
+                    li
+                        display: inline-block
+                        color: $whiteColor
+                        padding: 0 15px
+                        margin: 5px 0
+                        border-left: 2px solid rgba(255, 255, 255, .5)
+                        font-size: .9rem
+                        line-height: 1.1
+
+        .headerCategory
+            background-color: $seconderyLight
+            
+            .categoryMenu
+                display: flex
+                align-items: center
+                justify-content: center
+                flex-wrap: wrap
+
+                li
+                    display: inline-block
+                    padding: 15px 0
+                    transition: .3s
+
+                    &:hover
+                        background-color: $seconderyColor
+                    
+                    a
+                        display: block
+                        color: $whiteColor
+                        font-size: .85rem
+                        padding: 0 15px
+                        border-right: 2px solid $seconderyColor
+
+                        &:hover
+                            opacity: .8
+
+                    &:last-child
+                        a
+                            border: none
+
+                    &.dropdownParent
+                        position: relative
+
+                        &:hover
+                            .dropdown
+                                max-height: 1000px
+
+                        .dropdown
+                            // format
+                            position: absolute
+                            left: 0
+                            top: 100%
+                            z-index: 990
+
+                            // styles
+                            background-color: $seconderyColor
+                            min-width: 250px
+                            max-height: 0
+                            overflow: hidden
+                            transition: .5s
+
+                            li
+                                display: block
+                                padding: 12.5px 15px
+
+                                &:hover
+                                    background-color: $seconderyLight
+
+                                a
+                                    border: none
+
+    .mobileMenu
+        display: none
+
+// header responsive styles
+@media only screen and (max-width: 991px)
+    .header
+        .headerUpper
+            .headerNav
+                .navMenu
+                    li
+                        a
+                            padding: 10px 5px
+
+            .headerLogo
+                .logo
+                    margin-right: 15px
+                    
+                    img
+                        max-width: 120px
+
+                .shortCutBtn
+                    a
+                        font-size: .85rem
+                        padding: 6px 10px
+
+        .headerLower
+            .headerCategory
+                padding: 5px 0
+                .categoryMenu
+                    li
+                        padding: 10px 0
+
+@media only screen and (max-width: 767px)
+    .header
+        transition: .3s
+        .headerUpper
+            .headerNav
+                display: none
+
+            .headerLogo
+                padding: 0
+                align-items: center
+
+                .logo
+                    padding: 10px 0
+
+                .shortCutBtn
+                    display: none
+                
+                .mobileShortCut
+                    display: flex
+                    align-items: center
+
+                    .linkIcon
+                        display: flex
+                        align-items: center
+
+                        .linkIconItem
+                            height: 40px
+                            width: 40px
+                            text-align: center
+                            border-radius: 50%
+                            margin-left: 10px
+                            color: $whiteColor
+
+                            span i
+                                font-size: 1.15rem
+                                line-height: 40px
+
+                            &.phoneIcon
+                                background-color: rgba(0, 0, 0, .25)
+
+                            &.searchIcon
+                                position: relative
+
+                                input
+                                    position: absolute
+                                    top: 0
+                                    bottom: 0
+                                    right: 0
+                                    background-color: $seconderyColor
+                                    color: $whiteColor
+                                    border-radius: 20px
+                                    padding-right: 40px
+                                    font-size: .85rem
+                                    width: 0
+                                    overflow: hidden
+                                    z-index: 0
+                                    transition: .3s
+
+                                span
+                                    // format
+                                    position: sticky
+                                    z-index: 1
+                                    display: block
+
+                                    // styles
+                                    background-color: $seconderyColor
+                                    border-radius: 50%
+                                    padding: 0
+                                    height: 40px
+                                    width: 40px
+                                    transition: .3s
+
+                                &.active
+                                    input
+                                        right: -1px
+                                        padding-left: 15px
+                                        width: 200px
+
+                                    span
+                                        background-color: $whiteColor
+                                        color: $seconderyColor
+                                    
+
+                            &.cartIcon
+                                background-color: $highLightColor
+                            
+
+                    .menuIcon
+                        position: relative
+                        display: block
+                        height: 80px
+                        width: 80px
+                        text-align: center
+                        margin-left: 15px
+                        color: $whiteColor
+                        background-color: rgba(0, 0, 0, .35)
+
+                        span
+                            display: block
+                            position: absolute
+                            left: 50%
+                            transform: translate(-50%, 0)
+                            height: 5px
+                            width: 60%
+                            background-color: $whiteColor
+                            border-radius: 2px
+                            transition: .3s
+
+                            &:nth-last-child(1)
+                                top: 25%
+
+                            &:nth-last-child(2)
+                                top: 50%
+                                transform: translate(-50%, -50%)
+
+                            &:nth-last-child(3)
+                                bottom: 25%
+
+        .headerLower
+            .headerInfo
+                .infoLeft
+                    display: none
+
+                .infoRight
+                    text-align: center
+
+
+            .headerCategory
+                display: none
+
+    // header active styles
+    .header.active
+        background-color: $whiteColor
+        position: sticky
+        top: 0
+        left: 0
+        right: 0
+        z-index: 999
+
+        .headerUpper
+            .headerLogo
+                .logo
+                    img
+                        &.regularLogo
+                            display: none
+                        
+                        &.lightLogo
+                            display: block
+                            
+                .mobileShortCut
+                    .menuIcon
+                        span
+                            &:nth-last-child(1)
+                                top: 50%
+                                transform: translate(-50%, -50%) rotate(45deg)
+
+                            &:nth-last-child(2)
+                                opacity: 0
+
+                            &:nth-last-child(3)
+                                bottom: 50%
+                                transform: translate(-50%, 50%) rotate(-45deg)
+
+        .headerLower
+            display: none
+        
+        .mobileMenu
+            // format
+            display: block
+            position: fixed
+            top: 80px
+            left: 0
+            right: 0
+            bottom: 0
+            background-color: $whiteColor
+            border-top: 1px solid rgba(0, 0, 0, .05)
+            z-index: 999
+            overflow-y: scroll
+            padding-top: 15px
+
+            ul
+                padding-top: 25px
+                padding-bottom: 25px
+
+                li
+                    display: block
+                    margin-bottom: 15px
+
+                    a
+                        // format
+                        display: block
+                        position: relative
+
+                        // styles
+                        font-size: 1.5rem
+                        line-height: 1.25
+                        color: $seconderyColor
+
+                        span
+                            color: $primaryColor
+                            position: absolute
+                            top: 50%
+                            transform: translateY(-50%)
+                            right: 0
+
+                        &:hover
+                            opacity: .8
+                
+    // header scroll styles
+    .header.scroll
+        position: sticky
+        top: 0
+        left: 0
+        right: 0
+        z-index: 999
+        border-bottom: 1px solid rgba(255, 255, 255, .25)
+
+        .headerLower
+            display: none
+
+    // header slide in
+    .header.slideIn
+        @include slideInStyle
+
+@media only screen and (max-width: 480px)
+    .header
+        .headerUpper
+            .headerLogo
+                .logo
+                    margin-right: 5px
+                             
+                .mobileShortCut
+                    .linkIcon
+                        .linkIconItem
+                            height: 30px
+                            width: 30px
+                            margin-left: 5px
+
+                            span i
+                                font-size: .9rem
+                                line-height: 30px
+
+                            &.searchIcon
+                                input
+                                    padding-right: 30px
+
+                                span
+                                    height: 30px
+                                    width: 30px
+                                
+                                &.active
+                                    input
+                                        padding-right: 35px
+                                        width: 150px
+                                        font-size: .8rem
+
+                    .menuIcon
+                        height: 40px
+                        width: 40px
+                        margin-left: 5px
+
+                        span
+                            height: 3px
+
+        .mobileMenu
+            padding-top: 0!important
+            
+            ul
+                padding-top: 15px!important
+                
+                li
+                    margin-bottom: 5px!important
+                    a
+                        font-size: 1.15rem!important
+                    
+    // header active styles
+    .header.active
+        .mobileMenu
+            top: 69px
